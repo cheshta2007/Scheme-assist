@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 
 class UserProfile(BaseModel):
@@ -18,3 +18,4 @@ class SchemeResult(BaseModel):
     required_documents: List[str]
     official_source: str
     application_link: str
+    explanation: Optional[str] = None
